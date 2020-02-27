@@ -1,0 +1,80 @@
+
+/* Using media query and flexbox to make a responsive design
+This css styling will be enable for screens larger than 480px
+*/
+
+@media only screen and (min-width: 480px){
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  footer, header{
+    flex-basis: 100%;
+  }
+
+nav{
+  flex-basis: 7em;
+  flex-grow: 1;
+}
+
+main {
+  flex-basis: 10%;
+  flex-grow: 1;
+}
+
+aside{
+  flex-basis: 7em;
+  flex-grow: 1;
+
+}
+
+}
+
+
+
+nav ul {
+  margin:0;
+  padding: 0.5em;
+}
+nav li {
+    list-style: none;
+    margin: 0.4em;
+    padding: 0.4em;
+    border-radius: .5em;
+    background: #3F51B5;
+    color:white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    text-align: center;
+}
+nav li a:link, a:visited{
+    color:white;
+    text-decoration: node;
+
+}
+.menu li:hover {
+  background-color: #0099cc;
+}
+
+/* Footer and Header */
+header,footer {
+   background: #1A237E;
+   color: white;
+   padding: 0.5em;
+
+}
+
+.media-body {
+  padding: 0.5em;
+}
+/* right column */
+aside {
+   background: #9FA8DA;
+    padding: .5em;
+    margin: 0.4em;
+
+}
+/* middle column */
+main {
+   margin: 0.5em;
+   background: white;
+}

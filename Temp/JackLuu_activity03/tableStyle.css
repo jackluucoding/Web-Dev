@@ -1,0 +1,58 @@
+/* table styling */
+table,body {
+   font-family: "Lucida Sans", Verdana, Arial, sans-serif;
+   font-size: 1em;
+}
+td, th {
+   border: solid 1pt #949493 ;
+
+}
+
+
+thead{
+  background-color: sandybrown;
+  padding: 5px;
+}
+
+tfoot{
+  background-color: skyblue;
+  padding: 5px;
+}
+
+
+caption{
+  text-align: left;
+  background: darksalmon;
+  padding: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+tr:hover {
+  
+  background-color: black;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: darkseagreen;
+}
+
+
+
+
+
+
+
+
+/* footer and header */
+header, footer {
+  color: #111313;
+}
+h1 {
+  font-size: 2rem;
+  padding: 0.5em;
+}
+footer p{
+  font-size: 1rem;
+}

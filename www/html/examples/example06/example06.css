@@ -1,0 +1,15 @@
+figure {
+  background-color: gray;
+  width: 150;
+  padding: 5px;
+/* position: fixed; */
+/* float: right; */
+/* float: left; */
+float: right;
+}
+
+
+figcaption{
+  background-color: yellow;
+  position: absolute;
+}

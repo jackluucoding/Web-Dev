@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+   <meta charset="utf-8">
+   <title>Example 05: Forms</title>
+
+</head>
+<body>
+  <header>
+    <h1> Example 5: HTML Forms </h1>
+  </header>
+  <form method="get" action="http://www.randyconnolly.com/tests/process.php">
+  <fieldset>
+     <legend>Details</legend>
+     <p>
+       <label>Title: </label>
+       <input type="text" name="title" placeholder="Title goes here"   />
+     </p>
+
+
+     <p>
+       <label>Country: </label>
+       <select>
+        <option selected disabled>Choose a country</option>
+       <option>USA</option>
+       <option >China</option>
+       <option>Mexico</option>
+
+       </select>
+     </p>
+
+     <p>
+       Comment:
+       <textarea rows="2" cols="50">
+       </textarea>
+      </p>
+
+
+      <p>
+        <label>Date: <br/>
+          <input type="date" />
+        </p>
+
+
+        <label>Background Color:
+          <input type="color" name="back" />
+
+          <p>
+          <input type="submit" />
+
+          <input type="reset" />
+          </p>
+  
+  </fieldset>
+
+</form>
+
+<fieldset>
+  <legend>Radio button and Checkbox</legend>
+  <p>
+    Options: </br>
+    <input type="radio" name="where" value="1" checked>Option 1<br/>
+<input type="radio" name="where" value="2" >Option 2<br/>
+<input type="radio" name="where" value="3">Option 3
+    </p>
+    Accepted the software lisense: <input type="checkbox" name="lisense"> yes
+
+</p>
+
+
+</fieldset>
+
+
+<form>
+
+
+
+</form>
+
+<hr>
+<footer>
+  <p><small>Copyright &copy; 2020 Example 05 - HTML Forms</small></p>
+</footer>
+
+</body>
+</html>

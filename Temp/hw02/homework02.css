@@ -1,0 +1,87 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+
+/* general text formatting */
+
+h1, h2, h3, nav, footer {
+ font-family: Lobster, Cambria, "Times New Roman", serif;
+}
+body {
+   font-family: "Open Sans", Verdana, Arial, sans-serif;
+   font-size: 1em;
+   width: 95%;
+   height: 95%;
+   padding: 0px 0px 5px 5px;
+   align-content: center;
+   background-color: rgb(240, 238, 238);
+   margin: 0px 0px 5px 5px;
+
+}
+
+.biggertable{
+border-spacing: 5px;
+margin: 10px 0px 0px 0px;
+width: 100%;
+height: 100%;
+border: 1rem solid;
+border-radius: 0.5px;
+border-color: white;
+}
+
+
+table{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(228, 204, 204);
+  align: center;
+  padding: 5px 0px 5px 0px;
+
+
+  /* border-spacing: 2px; */
+
+}
+
+.box{
+  border: solid;
+  border-width: thin;
+  border-color: rgb(136,111,112);
+}
+
+
+th {
+  color: white;
+  background-color: rgb(67, 64, 64);
+}
+
+/* This class used to format the "Submit" "Clear Form" buttons */
+.buttons{
+  color: white;
+  background-color: rgb(235, 85, 83);
+  border-radius: 4px;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* Use this one to adjust the color of the "I accept
+the software license" and "Submit" "Clearn Form" buttons */
+.line{
+  background-color: rgb(136,111,112);
+
+}
+
+tbody{
+    background-color: rgb(228, 204, 204);
+}
+
+
+
+/* header and navigation */
+header, footer{
+  background-color: red;
+  color: white;
+}
