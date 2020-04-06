@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <style>
+button{
+  background-color: grey;
+  border-radius: 70px;
+}
+  </style>
+  <script type/Javascript>
+window.addEventListener('load', function(){
+document.getElementById('myBtn').addEventListener('click', function(){
+    var x = parseInt(document.getElementById('x').value);
+    var y = parseInt(document.getElementById('y').value);
+    var result = x+y;
+    if(!isNaN(result)){
+      var resultInput = document.getElementById("result").value = result;
+    }else{
+      alert("Please enter number!");
+    }
+  });
+});
+  </script>
+</head>
+<body>
+<h1> Calculator to add two numbers </h1>
+<input id="x" placeholder="Number A">
++
+<input id="y" placeholder="Number B">
+=
+<input id="result" placeholder="Result">
+<button id="myBtn">Result</button>
+
+</body>
+</html>

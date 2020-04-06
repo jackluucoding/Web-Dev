@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title> Example 01 </title>
+
+</head>
+<body>
+<header>
+<h1 id="here"> Hello there </h1>
+</header>
+<main id="main">
+</main>
+
+<script type="text/javascript">
+var node = document.getElementById('here');
+node.innerHTML = "New text";
+
+var nodeHeader = document.getElementsByTagName('header');
+nodeHeader[0].style.backgroundColor="red";
+
+var nodeMain = document.getElementById('main')
+nodeMain.innerHTML = "Text";
+
+var text = document.createTextNode("This is dynamic");
+var h = document.createElement('h2');
+
+h.appendChild(text);
+nodeMain.appendChild(h);
+
+</script>
+
+</body>
+</html>

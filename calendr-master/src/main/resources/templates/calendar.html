@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+<title>Calendr</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="A calendar app to keep you organized.">
+	<meta name="keywords" content="Calendar, organization, time management">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/styles.css?init=1" rel="stylesheet" type="text/css">
+	<link href="css/calendar.css?init=1" rel="stylesheet" type="text/css">
+	<script src="js/jquery.js"></script>
+	<script src="js/functions.js"></script>
+	<script src="js/calendar.js?init=1" defer></script>
+</head>
+<body>
+	<div id="clickoff"></div>
+	
+	<div id="profile">
+			<ul>
+        		<li><i class="material-icons">face</i><span th:text="${user.firstname} + ' ' + ${user.lastname}"></span></li>
+        		<li><i class="material-icons">person</i><span th:text="${user.username}"></span></li>
+        		<li><i class="material-icons">phone</i><span th:text="${user.telephone}"></span></li>
+        		<li><i class="material-icons">mail</i><span th:text="${user.email}"></span></li>
+				<li>
+					<i class="material-icons">insert_photo</i>
+					<label for="file"><span class="piclabel">Change Profile Pic</span></label>
+					<input id="file" type="file" name="file" accept="image/*" style="display: none;">
+				</li>
+			</ul>
+		</div>
+		
+	<div id="createevent">
+		<form id="createEventForm">
+			<h1>Create Event</h1>
+						
+			<label for="etitle">Title</label>
+			<input id="etitle" type="text" name="title" placeholder="Title" required>
+			
+			<label for="estartDate">Start Date</label>
+			<select id="estartDate" name="startDate" required>
+				<option value="Sunday">Sunday</option>
+				<option value="Monday">Monday</option>
+				<option value="Tuesday">Tuesday</option>
+				<option value="Wednesday">Wednesday</option>
+				<option value="Thursday">Thursday</option>
+				<option value="Friday">Friday</option>
+				<option value="Saturday">Saturday</option>
+			</select>
+					
+			<label for="estartTime">Start Time</label>
+			<select id="estartTime" name="startTime">
+				<option value ="12am">12:00 am</option>
+				<option value ="1am">1:00 am</option>
+				<option value ="2am">2:00 am</option>
+				<option value ="3am">3:00 am</option>
+				<option value ="4am">4:00 am</option>
+				<option value ="5am">5:00 am</option>
+				<option value ="6am">6:00 am</option>
+				<option value ="7am">7:00 am</option>
+				<option value ="8am">8:00 am</option>
+				<option value ="9am">9:00 am</option>
+				<option value ="10am">10:00 am</option>
+				<option value ="11am">11:00 am</option>
+				<option value ="12pm">12:00 pm</option>
+				<option value ="1pm">1:00 pm</option>
+				<option value ="2pm">2:00 pm</option>
+				<option value ="3pm">3:00 pm</option>
+				<option value ="4pm">4:00 pm</option>
+				<option value ="5pm">5:00 pm</option>
+				<option value ="6pm">6:00 pm</option>
+				<option value ="7pm">7:00 pm</option>
+				<option value ="8pm">8:00 pm</option>
+				<option value ="9pm">9:00 pm</option>
+				<option value ="10pm">10:00 pm</option>
+				<option value ="11pm">11:00 pm</option>
+			</select>				
+				
+			<label for="eendTime">End Time</label>
+			<select id="eendTime" name="endTime" required>
+				<option value ="12am">12:00 am</option>
+				<option value ="1am">1:00 am</option>
+				<option value ="2am">2:00 am</option>
+				<option value ="3am">3:00 am</option>
+				<option value ="4am">4:00 am</option>
+				<option value ="5am">5:00 am</option>
+				<option value ="6am">6:00 am</option>
+				<option value ="7am">7:00 am</option>
+				<option value ="8am">8:00 am</option>
+				<option value ="9am">9:00 am</option>
+				<option value ="10am">10:00 am</option>
+				<option value ="11am">11:00 am</option>
+				<option value ="12pm">12:00 pm</option>
+				<option value ="1pm">1:00 pm</option>
+				<option value ="2pm">2:00 pm</option>
+				<option value ="3pm">3:00 pm</option>
+				<option value ="4pm">4:00 pm</option>
+				<option value ="5pm">5:00 pm</option>
+				<option value ="6pm">6:00 pm</option>
+				<option value ="7pm">7:00 pm</option>
+				<option value ="8pm">8:00 pm</option>
+				<option value ="9pm">9:00 pm</option>
+				<option value ="10pm">10:00 pm</option>
+				<option value ="11pm">11:00 pm</option>
+			</select>
+						
+			<label for="ecategory">Category</label>
+			<input id="ecategory" type="text" name="category" placeholder="Category" required>
+						
+			<label for="elocation">Location</label>
+			<input id="elocation" type="text" name="location" placeholder="Location">
+			
+			<label for="edescription">Description</label>
+			<input id="edescription" type="text" name="description" placeholder="Description">
+							
+			<button type="submit"><span>Submit </span><i class="material-icons icon-marg-left">arrow_forward</i></button>
+ 			<p class="reset">Reset</p>
+ 		</form>
+	</div>
+
+	<div id="mastercalendarwrapper">
+		<div id="menuHeader">
+			<div id="menucontainer">
+				<div id="logout" class="userinfo">	
+					<i class="material-icons icon-marg-right">arrow_back</i><span> Logout</span>
+				</div>
+			
+				<img src="images/calendr.png" alt="calendr" class="logo">	
+				
+				<div id="user" class ="userinfo">		
+					<span th:text="'Hello, ' + ${user.username}"></span>	
+ 				</div>
+			</div>
+		</div>
+
+		<div id="leftMenu">
+			<div>
+				<div id="create">
+					<img src="images/calendar.png" alt="Add Calendar">
+				</div>
+				<div id="calendarcontainer">
+					<div id="calendarcontainerheader">
+						<p>Categories</p>
+						<i class="material-icons">keyboard_arrow_down</i>
+					</div>
+					<div id="calendarlist">
+						<ul>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			
+			<button class="googlebutton googlestyle" type="button">Import from Google</button>
+		</div>
+
+		<div id="mainView">
+			<div class="gridcontainer">
+				<div class="hourcol">
+					<div></div>
+					<div class="hour">12am</div>
+					<div class="hour">1am</div>
+					<div class="hour">2am</div>
+					<div class="hour">3am</div>
+					<div class="hour">4am</div>
+					<div class="hour">5am</div>
+					<div class="hour">6am</div>
+					<div class="hour">7am</div>
+					<div class="hour">8am</div>
+					<div class="hour">9am</div>
+					<div class="hour">10am</div>
+					<div class="hour">11am</div>
+					<div class="hour">12pm</div>
+					<div class="hour">1pm</div>
+					<div class="hour">2pm</div>
+					<div class="hour">3pm</div>
+					<div class="hour">4pm</div>
+					<div class="hour">5pm</div>
+					<div class="hour">6pm</div>
+					<div class="hour">7pm</div>
+					<div class="hour">8pm</div>
+					<div class="hour">9pm</div>
+					<div class="hour">10pm</div>
+					<div class="hour">11pm</div>
+					<div></div>
+				 </div>
+				 <div class="gridwrapper">
+					<div class="gridheaderwrapper">
+						<div class="gridheader"><span></span><span>Sunday</span></div>
+						<div class="gridheader"><span></span><span>Monday</span></div>
+						<div class="gridheader"><span></span><span>Tuesday</span></div>
+						<div class="gridheader"><span></span><span>Wednesday</span></div>
+						<div class="gridheader"><span></span><span>Thursday</span></div>
+						<div class="gridheader"><span></span><span>Friday</span></div>
+						<div class="gridheader"><span></span><span>Saturday</span></div>
+					</div>
+					<div class="colwrapper">
+						<div class="col"></div>
+						<div class="col"></div>
+						<div class="col"></div>
+						<div class="col"></div>
+						<div class="col"></div>
+						<div class="col"></div>
+						<div class="col"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

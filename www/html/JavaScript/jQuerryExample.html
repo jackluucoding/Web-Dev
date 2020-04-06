@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en"
+<head>
+<meta charset="utf-8">
+<title>Example 01 - jQuery</title>
+
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script>
+
+  <script type="text/javascript">
+$(document).ready(function(){
+  $("#here").html("Example 1 - jQuery");
+  var p = $("<p> </p>");
+  p.html("Some text goes here");
+  $("#main").append(p);
+
+  //add event
+  $("#message").on("click", function(){
+  $("#message").html("Hello world!")
+  .css("background-color", "red")
+  .css("font-size", "2em")
+  });
+});
+  </script>
+
+</head>
+<body>
+
+<header>
+<h1 id="here">Hello There</h1>
+</header>
+
+<main id="main">
+  <button id="message">
+    Click here to see message
+  </button>
+</main>
+</body>
+</html>

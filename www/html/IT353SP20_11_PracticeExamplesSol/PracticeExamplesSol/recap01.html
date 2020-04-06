@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+   <meta charset="utf-8">
+   <title>Recap Example - HTML</title>
+   <style>
+   body {
+     max-width: 500px;
+     margin: auto;
+  //   background-color: lightyellow;
+   }
+   table,th {
+     border: 1px solid black;
+      border-collapse: collapse;
+   }
+   form {
+     display: flex;
+   }
+   </style>
+</head>
+<body class="content">
+  <header>
+    <h1>Practice Forms and Table in HTML</h1>
+  </header>
+  <main>
+    <h2>My Table </h2>
+    <table>
+      <caption> Two Columns Table </caption>
+      <tr>
+        <th> Picture</th>
+        <th> Description </th>
+      </tr>
+      <tr>
+        <td><img src="http://placekitten.com/100/100" alt="Picture" name="Kitten"></td>
+        <td> This is a picure of ...  </td>
+      </tr>
+    </table>
+
+<h2>Forms </h2>
+  <form method="post" action="http://www.randyconnolly.com/tests/process.php">
+  <fieldset>
+     <legend>My Form Field Set 1</legend>
+     <div>
+       <label>Name: </label>
+       <input type="text" name="title" placeholder="type title" />
+     </div>
+     <div>
+       <label>City: </label>
+       <select name="where">
+         <option>Choose a country</option>
+         <option>Canada</option>
+         <option>Finland</option>
+         <option>United States</option>
+        </select>
+     </div>
+   </fieldset>
+    <fieldset>
+      <legend>My Form Field Set 1</legend>
+     <div>
+       <label> Date: </label>
+         <input type = "date" name = "date"/>
+    </div>
+    <div>
+      <label> Background Color:
+        <input type="color" name="background" />
+    </div>
+    <div>
+     <input type="submit"/> <input type="reset" />
+   </div>
+  </fieldset>
+</form>
+</main>
+
+<hr>
+<footer>
+  <p><small>Copyright &copy; 2020  - Recap Forms and Tables</small></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+
+	<title>Example - Javascript Events</title>
+
+	<script type = "text/JavaScript">
+	//this line is for the document to load.
+	window.addEventListener('load', function(){
+
+		var nodeButton = document.getElementById('myButton');
+		nodeButton.addEventListener('click', function(){
+			alert('Are you under arrest');
+		}
+		);
+	} );
+
+
+	</script>
+
+</head>
+
+<body>
+
+<button id="myButton">Click here </button>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Calendr - Heal Your Schedule</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="A calendar app to keep you organized.">
+    <meta name="keywords" content="Calendar, organization, time management">
+    <meta name="author" content="Alan Hunt">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/functions.js"></script>
+    <script src="js/myscript.js" defer></script>
+</head>
+	<body>
+		<noscript>
+			<style type="text/css">
+				#masterwrapper{
+					display: none;
+				}
+			</style>
+			<div>
+				This website, among every other, requires JavaScript to function optimally- especially dynamic web applications
+				like Calendr. Please enable JavaScript in your browser, it's safe- we promise.
+			</div>
+		</noscript>
+	    <div id="masterwrapper">
+			<div id="indexcontent">
+	            <img src="images/calendr.png" alt="calendr" id="logo">
+		        <div id="divForm">
+			        <form id="loginform">           
+						<h1>Fix your schedule.</h1>
+						<p>Username</p>
+						<input type="text" name="username" id="username" placeholder="Username">
+						<p>Password</p>
+						<input type="password" name="password" id="password" placeholder="Password">
+						<button type="submit"><span>Log In </span><i class="material-icons icon-marg-left">arrow_forward</i></button>
+						<p id="signup">Don't have an account? Sign up!</p>
+						<p class="error" th:text="${error}"></p>
+					</form>
+										
+					<form id="signupform">
+						<h1>Create Profile</h1>
+						
+						<label for="username">Username</label>
+						<input id="newusername" type="text" placeholder="Username" autofocus name="username" required>
+						
+						<label for="email">Email</label>
+						<input id="email" type="text" placeholder="Email" autofocus name="email" required>
+							
+						<label for="password">Password</label>
+						<input id="newpassword" type="password" placeholder="Password" name="password" required>
+							
+						<label for="password2">Re-type Password</label>
+						<input id="newpassword2" type="password" name="repeat" placeholder="Password Again" required>
+							
+						<label for="name">Your Name</label>
+						<input type="text" id="name" placeholder="Your Name" name="name" required>
+							
+						<label for="telephone">Telephone Number</label>
+						<input type="tel" id="telephone" placeholder="Telephone Number" name="telephone" required maxlength="10">
+							
+						<button type="submit"><span>Submit </span><i class="material-icons icon-marg-left">arrow_forward</i></button>
+						<p id="back">Back</p>	
+					</form>
+					
+		        </div>
+			</div>
+	    </div>
+	</body>
+</html>
