@@ -1,0 +1,14 @@
+.imgdiv{
+ display: inline-block;
+ width:150px;
+ height:150px;
+ border:1px solid;
+ margin: 1px 1px 1px 1px;
+ text-align: center;
+}
+
+
+
+h1{
+  color: red;
+}

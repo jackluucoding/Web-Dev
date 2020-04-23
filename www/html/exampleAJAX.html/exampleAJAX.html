@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Example - AJAX</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+    function display(){
+      var searchNumber = 5;
+      var url ="https://public-us.opendatasoft.com/api/records/1.0/search/?";
+      var data = "dataset=us-colleges-and-universities&sort=tot_enroll&rows="+searchNumber;
+
+      $.get(url,data).done(function(response){
+        // $("#colleges").html(response.nhits);
+        // $("#colleges").html(response.records[0].fields.name);
+        // $("#colleges").append('<p>'+response.records[0].fields.name+'</p>');
+        for(var i = 0; i < response.records.length; i++){
+          $("#colleges").append('<p>'+response.records[i].fields.name+'</p>');
+        }
+      });
+    }
+
+    $(document).ready(function(){
+      $("#display").on("click",display);
+      // display();
+    });
+
+
+
+    // function display(){
+    //   var searchNumber;
+    //   var url = "https://public-us.opendatasoft.com/api/records/1.0/search/?";
+    //   var data = "dataset=us-colleges-and-universities&sort=tot_enroll&rows="+searchNumber;
+    //
+    //   $.get(url,data).done(function(response){
+    //     //$("#colleges").html(response.record[0].fields.name);
+    //     for(var i=0; i < response.records.length; i++){
+    //         $("#colleges").append('<p>' + response.records[i].fields.name + '</p>');
+    //     }
+    //     });
+    // }
+
+    // $(document).ready(function(){
+    //   $("#display").on("click", display);
+    //   //display();
+    // });
+
+    </script>
+
+  </head>
+  <body>
+    <main id="main">
+      <h1> Example - AJAX</h1>
+      <button id = "display">
+        Click to display results
+      </button>
+      <div id="colleges">
+
+      </div>
+
+
+    </main>
+
+    <hr>
+    <footer>
+      <p>Your Full Name, Copyright &copy; 2020 - IT353 - Web Development Technologies </p>
+        <script> document.write("Last Modified: "+ document.lastModified); </script>
+    </footer>
+</body>
+</html>
